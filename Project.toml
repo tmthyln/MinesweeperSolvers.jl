@@ -1,0 +1,4 @@
+name = "MinesweeperSolvers"
+uuid = "82bbd215-ca94-4ee1-9f63-cfdea90daa57"
+authors = ["Timothy Lin <32549553+tmthyln@users.noreply.github.com>"]
+version = "0.1.0-DEV"
