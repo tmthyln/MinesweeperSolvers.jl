@@ -2,3 +2,7 @@ name = "MinesweeperSolvers"
 uuid = "82bbd215-ca94-4ee1-9f63-cfdea90daa57"
 authors = ["Timothy Lin <32549553+tmthyln@users.noreply.github.com>"]
 version = "0.1.0-DEV"
+
+[deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+Tullio = "bc48ee85-29a4-5162-ae0b-a64e1601d4bc"
