@@ -122,3 +122,27 @@ function chord!(board, pos)
         end
     end
 end
+
+function superchord!(board::SquareBoard)
+    while true
+        already_open = count(board.open)
+
+        # cells where flagged or are open mines
+        known_mine_layout = board.flags .| (board.mines .& board.open)
+
+        # known neighbors given the known mine layout
+        known_neighbors = generate_neighbors(known_mine_layout)
+
+        # positions for which it is okay to open all adjacent cells
+        openable_adjacent_cells = (known_neighbors .== board.neighbors) .& board.open
+
+        # cells that are adjacent to at least one cell that is "complete" (all nearby mines known)
+        openable_cells = generate_neighbors(openable_adjacent_cells) .> 0
+
+        for pos in findall(openable_cells)
+            select!(board, pos)
+        end
+
+        already_open == count(board.open) && break
+    end
+end
