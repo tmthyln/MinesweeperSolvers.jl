@@ -9,5 +9,4 @@ Tullio = "bc48ee85-29a4-5162-ae0b-a64e1601d4bc"
 
 [compat]
 DataStructures = "0.18"
-Tullio = "0.2"
-
+Tullio = "0.2, 0.3"
